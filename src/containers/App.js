@@ -1,10 +1,15 @@
-
-
+import { Provider } from "react-redux";
+import Header from "../components/Header";
+import store from "../redux/store";
+import Todo from "./Todo";
 function App() {
   return (
-    <div className="App">
-      hola 
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Header/>
+        <Todo/>
+      </div>
+    </Provider>
   );
 }
 
